@@ -1,20 +1,30 @@
 #include <stdio.h>
 
-void copyArray(int *source, int *destination, int size) {
+void copyarr(int *arr1, int *arr2, int size) {
     for (int i = 0; i < size; i++) {
-        *(destination + i) = *(source + i);  
+        *(arr2 + i) = *(arr1 + i);    
+
+        // How Pointer Arithmetic Works: 
+        // source is the address of the first element: &source[0].
+        // To access the second element: *(source + 1) or source[1].
+        // For the third element: *(source + 2) or source[2].
+        // The pointer doesn’t only limit you to the first element—it gives you access to the entire array by moving forward (or backward) in memory.
+
+
     }
 }
 
-int main() {
-    int sourceArray[] = {1, 2, 3, 4, 5};
-    int size = sizeof(sourceArray) / sizeof(sourceArray[0]);
-    int destinationArray[size];  
-    copyArray(sourceArray, destinationArray, size);
 
-    printf("Contents of the destination array:\n");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", *(destinationArray + i));  
+int main(){
+    int arr1[] = {0, 1, 1, 2, 3, 5, 8, 13};
+    int size = 8;
+    int arr2[size];
+
+    copyarr (arr1, arr2, size);
+
+    printf("copied array: ");
+    for (int i = 0; i < size; i++){
+        printf("%d ", arr2[i]);
     }
     printf("\n");
 
