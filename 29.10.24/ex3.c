@@ -3,16 +3,17 @@
 
 int sumArray(int arr[], int n){
     // recursive Karon kbacatri 
-    // if (n == 0) return 0;
+    // if (n == 0) return 0;    // ete bolori sum-y
     // return arr[n-1] + sumArray(arr, n-1);
 
     if (n==1){
-        return arr[n-1];
+        return arr[n-1];    // ete demi n hatiky
     }else{
         return arr[n-1] + sumArray (arr, n-1);
     }
 
 }
+
 
 int main(){
     int arr[SIZE];
