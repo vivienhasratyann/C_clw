@@ -11,7 +11,6 @@ int sumArray(int arr[], int n){
     }else{
         return arr[n-1] + sumArray (arr, n-1);
     }
-
 }
 
 
